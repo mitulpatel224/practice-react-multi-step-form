@@ -1,8 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import logo from "./logo.svg";
 
 function App() {
+  // TODO: STEP 1 - PERSONAL INFO FORM
+  // TODO: STEP 2 - PLAN SELECTION
+  // TODO: PLAN CARD
+  // TODO: MONTHLY SUBSCRIPTION
+  // TODO: STEP 3 - ADD-ONS
+  // TODO: ADD-ON OPTION
+  // TODO: STEP 4 - SUMMARY
+  // TODO: THANK YOU NOTE
+
+  // TODO: ASIDE FOR STEPPER
+  // TODO: STEPPER OPTION
+  // TODO: STEP_FOOTER
+
+  // SHARED
+  // TODO: STEP_HEADER
+
   return (
     <div className="App">
       <header className="App-header">
