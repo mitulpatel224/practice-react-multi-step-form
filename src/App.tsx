@@ -1,5 +1,6 @@
+import { useState } from "react";
+import { Outlet } from "react-router";
 import "./App.scss";
-import logo from "./logo.svg";
 
 function App() {
   // TODO: STEP 1 - PERSONAL INFO FORM
@@ -18,22 +19,12 @@ function App() {
   // SHARED
   // TODO: STEP_HEADER
 
+  /** Stepper state */
+  const [stepper, setStepper] = useState({ active: 1, data: {} });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Outlet context={[stepper, setStepper]}></Outlet>
     </div>
   );
 }
