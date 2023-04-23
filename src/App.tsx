@@ -22,18 +22,25 @@ function App() {
   // TODO: STEP_HEADER
 
   /** Stepper state */
-  const [stepper, setStepper] = useState({ active: 1, data: {} });
+  const [stepper, setStepper] = useState({
+    active: 1,
+    data: {
+      personalInfo: {},
+      selectedPlan: {},
+      addons: [],
+    },
+  });
 
   return (
     <div className="App container">
       <div className="header">
-        <Aside />
+        <Aside stepperCtx={{ stepper, setStepper }} />
       </div>
       <div className="main">
         <Outlet context={[stepper, setStepper]}></Outlet>
       </div>
       <div className="footer">
-        <StepperFooter></StepperFooter>
+        <StepperFooter stepperCtx={{ stepper, setStepper }}></StepperFooter>
       </div>
     </div>
   );
