@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Outlet } from "react-router";
 import "./App.scss";
+import Aside from "./components/Aside";
+import StepperFooter from "./components/StepperFooter";
 
 function App() {
   // TODO: STEP 1 - PERSONAL INFO FORM
@@ -23,8 +25,16 @@ function App() {
   const [stepper, setStepper] = useState({ active: 1, data: {} });
 
   return (
-    <div className="App">
-      <Outlet context={[stepper, setStepper]}></Outlet>
+    <div className="App container">
+      <div className="header">
+        <Aside />
+      </div>
+      <div className="main">
+        <Outlet context={[stepper, setStepper]}></Outlet>
+      </div>
+      <div className="footer">
+        <StepperFooter></StepperFooter>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,10 @@ import App from "./App";
 import PersonalInfo from "./components/PersonalInfo";
 import "./index.css";
 /* ---------------------------------------------------------------------- */
+import AddOns from "./components/AddOns";
+import PlanSelection from "./components/PlanSelection";
+import Summary from "./components/Summary";
+import ThankYouNote from "./components/ThankYouNote";
 import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
@@ -16,6 +20,22 @@ const router = createBrowserRouter([
       {
         path: "personal-info",
         element: <PersonalInfo />,
+      },
+      {
+        path: "plan-selection",
+        element: <PlanSelection />,
+      },
+      {
+        path: "addon-selection",
+        element: <AddOns />,
+      },
+      {
+        path: "summary",
+        element: <Summary />,
+      },
+      {
+        path: "greet",
+        element: <ThankYouNote />,
       },
     ],
   },
